@@ -31,6 +31,9 @@ class GamesController extends Controller
         $sub = $request->sub_text;
         $text = $request->text;
 
+        $sub = strtolower($sub);
+        $text = strtolower($text);
+
         // 2. check if the input value is null
         if($sub == '' || $text == ''){
 
